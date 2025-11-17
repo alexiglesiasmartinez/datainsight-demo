@@ -62,8 +62,7 @@ Now open the frontend: http://localhost:5173
 
 ### How to run the tests:
 
-Inside of the ```/backend/tests``` folder, run:
+Stop the django server, go to the ```/backend``` folder and run:
 ```bash
 python manage.py test tasks
 ```
-
