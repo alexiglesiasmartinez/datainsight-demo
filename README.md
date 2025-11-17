@@ -4,15 +4,13 @@
 ![Django](https://img.shields.io/badge/Django-5.1-green)
 ![React](https://img.shields.io/badge/React-18-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 
 A beautiful, production-ready Kanban board (Trello/Notion style) built with modern technologies.
 
-**Tech Stack**  
-- **Backend**: Django 5 + Django REST Framework  
-- **Frontend**: React 18 + TypeScript + Vite + styled-components + dnd-kit + Framer Motion  
-- **Database**: PostgreSQL (production) / SQLite (dev)  
-- **Deployment**: Docker + Docker Compose
+**Tech Stack**
+- **Backend**: Django 5 + Django REST Framework.
+- **Frontend**: React 18 + TypeScript + Vite + styled-components + dnd-kit + Framer Motion.
+- **Database**: PostgreSQL (production) / SQLite (dev).
 
 ### Features
 - Drag & drop tasks between columns.
@@ -23,7 +21,6 @@ A beautiful, production-ready Kanban board (Trello/Notion style) built with mode
 - Beautiful toasts with react-hot-toast.
 - 100% TypeScript.
 - 5 passing Django integration tests.
-- Zero-config setup with Docker.
 
 ### How to run the web app:
 
@@ -31,12 +28,29 @@ A beautiful, production-ready Kanban board (Trello/Notion style) built with mode
 ```bash
 git clone https://github.com/your-username/datainsight-demo.git
 ```
+- Start the backend:
 ```bash
-cd datainsight-demo
+cd backend
+
+python -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+python manage.py migrate
+
+python manage.py runserver
 ```
-- Start everything (backend + frontend + DB)
+- Start the frontend:
 ```bash
-docker compose up --build
+cd ..
+
+cd frontend
+
+npm install
+
+npm run dev
 ```
 
 That’s it!
